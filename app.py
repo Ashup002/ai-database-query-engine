@@ -1,4 +1,9 @@
 import streamlit as st
+from dotenv import load_dotenv
+
+# Load environment variables
+load_dotenv()
+
 from llm import generate_sql
 from validator import validate_query
 from database import run_query

@@ -1,0 +1,28 @@
+# Environments
+venv/
+env/
+.env
+.venv
+
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# IDEs and Editors
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# OS generated files
+.DS_Store
+Thumbs.db
+
+# Databases
+*.db
+*.sqlite3
+demo.db
+
+# Streamlit
+.streamlit/

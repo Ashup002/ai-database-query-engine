@@ -1,12 +1,8 @@
 from google import genai
 import os
 
-# Configure API key securely
-genai.configure(api_key=os.getenv("GEMINI_API_KEY"))
-
-# Use correct free model
-model = genai.GenerativeModel("gemini-1.5-flash")
-
+# The SDK automatically picks up the GEMINI_API_KEY environment variable.
+client = genai.Client()
 
 def generate_sql(user_query, schema):
     prompt = f"""
@@ -27,7 +23,10 @@ User Query:
 """
 
     try:
-        response = model.generate_content(prompt)
+        response = client.models.generate_content(
+            model='gemini-1.5-flash',
+            contents=prompt,
+        )
         return response.text.strip()
     except Exception as e:
         print("LLM Error:", e)
