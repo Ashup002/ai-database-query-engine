@@ -4,7 +4,7 @@
 This system is an AI-powered SQL assistant built with **Streamlit**, **Google Gemini**, and **Oracle Database**. It allows users to ask questions about a medical database (MediLink & MediStore) using natural language. The system securely translates these natural language queries into Oracle SQL, validates them for safety (preventing destructive operations), and executes them directly against the database to return results.
 
 ## Features
-- **Natural Language to SQL**: Uses Google Gemini (`gemini-1.5-flash`) to intelligently generate SQL queries based on a provided database schema.
+- **Natural Language to SQL**: Uses Google Gemini (`gemini-3-flash-preview`) to intelligently generate SQL queries based on a provided database schema.
 - **Safety First**: Includes a built-in query validator (`validator.py`) that actively blocks potentially harmful SQL commands (e.g., `DROP`, `DELETE`, `UPDATE`, `TRUNCATE`).
 - **Oracle DB Integration**: Connects and executes queries directly against an Oracle Database using `oracledb`.
 - **Interactive UI**: A clean, intuitive web interface powered by Streamlit.
