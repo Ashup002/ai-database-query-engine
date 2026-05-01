@@ -2,7 +2,9 @@ from google import genai
 import os
 
 # The SDK automatically picks up the GEMINI_API_KEY environment variable.
-client = genai.Client()
+client = genai.Client(
+    api_key=os.getenv("GEMINI_API_KEY")
+)
 
 def generate_sql(user_query, schema):
     prompt = f"""
